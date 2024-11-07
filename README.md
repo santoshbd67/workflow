@@ -23,7 +23,7 @@ Generate SAS (Shared Access Signature) Token: A SAS token grants limited access 
 
 Upload Document: Use the SAS token to upload the document to the blob storage. This step is important because it allows other services (like the extraction service) to access the file without relying on your local system.
 
-#Step 4: Convert PDF Document to TIFF Format
+# Step 4: Convert PDF Document to TIFF Format
 Set up PDF to TIFF Conversion: Since the document is in PDF format and the Extraction API expects TIFF files, the next step is to convert each page of the PDF into individual TIFF files. TIFF files provide high-quality images and support multiple compression types, which makes them suitable for document analysis.
 
 Convert and Save Each Page as TIFF: Each page of the PDF will be converted into a separate TIFF image. Create a dedicated folder (like ./split/) to store these files, using a naming convention like documentId_page#.tiff (where each file is sequentially named according to the page number).
